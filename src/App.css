@@ -1,3 +1,16 @@
+body {
+  overflow-x: hidden;
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  background-image: url('./data/backimg.jfif');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-size: 100% 100%;
+
+}
+
 /* Home Section Styles start here */
 .home-image {
   width: 125vh;
@@ -7,6 +20,7 @@
 .image-container {
   text-align: center;
 }
+
 /* Home Section Styles end here */
 
 /* Project Section Styles start here */
@@ -20,7 +34,9 @@
   height: 30vh;
   padding: 20px;
   resize: both;
+  transition: transform .2s;
 }
+
 /* Project Section Styles end here */
 
 /* Education Section Styles start here */
@@ -33,6 +49,7 @@
   text-align: center;
   padding: 10px;
 }
+
 /* Education Section Styles start here */
 
 /* Skill Section Styles start here */
@@ -45,16 +62,19 @@
 }
 
 .skills-img {
-  width: 60vh;
+  /* width: 60vh; */
+  width: auto;
   height: 30vh;
   padding: 20px;
   resize: both;
   background-color: transparent;
+  transition: transform .2s;
 }
 
 .skills-item {
   list-style: none;
 }
+
 /* Skill Section Styles end here */
 
 /* Contact Section Styles starts here */
@@ -69,6 +89,7 @@
   color: white;
   text-align: center;
 }
+
 /* Contact Section Styles ends here */
 
 /* Common Style starts here */
@@ -97,7 +118,9 @@
 
 .menu-item {
   padding-right: 25px;
-  user-select:none;
+  user-select: none;
+  cursor: pointer;
+  ;
 }
 
 .mt-20 {
@@ -106,4 +129,38 @@
 
 .mb-20 {
   margin-bottom: 20px;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.skills-img-0:hover,
+.skills-img-1:hover,
+.skills-img-2:hover,
+.skills-img-3:hover,
+.skills-img-4:hover,
+.skills-img-5:hover,
+.skills-img-6:hover,
+.projects-img-0:hover,
+.projects-img-1:hover,
+.projects-img-2:hover,
+.projects-img-3:hover,
+.projects-img-4:hover,
+.projects-img-5:hover,
+.projects-img-6:hover {
+  /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  transform: scale(1.1);
+}
+
+.education-0:hover,
+.education-1:hover,
+.education-2:hover {
+  border: 1px solid #282c34;
+  /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  transform: scale(1.1);
+}
+
+.education {
+  transition: transform .2s !important;
 }

@@ -31,34 +31,31 @@ export default class Education extends PureComponent {
                 <h2>
                     My Educational Background
                 </h2>
-                
-                    {
-                        education.map(item => {
-                            return (
-                                <Grid key={item.title} container spacing={3}>
-                                    <Grid item xs={3}></Grid>
-                                    <Grid item xs={6}>
-                                        <Paper className="paper">
-                                            <Typography variant="h6" gutterBottom>
+                {
+                    education.map((item, index) => {
+                        return (
+                            <Grid key={item.title} container spacing={3} className={`justify-content-center education ${index}`}>
+                                <Grid item xs={6}>
+                                    <Paper className={`paper education education-${index}`}>
+                                        <Typography variant="h6" gutterBottom>
                                             {item.title}
-                                            </Typography>
-                                            <Typography variant="subtitle1" gutterBottom>
+                                        </Typography>
+                                        <Typography variant="subtitle1" gutterBottom>
                                             {item.course}
-                                            </Typography>
-                                            <Typography variant="subtitle1" gutterBottom>
+                                        </Typography>
+                                        <Typography variant="subtitle1" gutterBottom>
                                             {item.college}
-                                            </Typography>
-                                            <Typography variant="subtitle1" gutterBottom>
+                                        </Typography>
+                                        <Typography variant="subtitle1" gutterBottom>
                                             {item.duration}
-                                            </Typography>
-                                        </Paper>
-                                    </Grid>
-                                    <Grid item xs={3}></Grid>
+                                        </Typography>
+                                    </Paper>
                                 </Grid>
-                                
-                            )
-                        })
-                    }
+                            </Grid>
+
+                        )
+                    })
+                }
             </div>
         )
     }
